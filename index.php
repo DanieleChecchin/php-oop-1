@@ -1,21 +1,21 @@
 <?php
 
+require_once __DIR__ . '/FilmGenre.php';
 class Movie
 {     //Variabili di istanza
     public $title;
-    public $genre;
     public $year;
     public $language;
+    public $genre;
 
     //Construct popolato
     function __construct(
         string $_title,
-        string $_genre,
         int $_year,
-        string $_language
+        string $_language,
+        FilmGenre $_genre
     ) {
         $this->title = $_title;
-        $this->genre = $_genre;
         $this->year = $_year;
         $this->language = $_language;
     }
@@ -24,11 +24,6 @@ class Movie
     function getTitle() //
     {
         return 'Il titolo è: ' . $this->title;
-    }
-
-    function getGenre()
-    {
-        return 'Genere: ' . $this->genre;
     }
 
     function getYear()
@@ -42,9 +37,13 @@ class Movie
     }
 }
 
-$minions = new Movie('Minions', 'Animazione', 2015, 'Italiano');
+//Generi
+$comedy = new FilmGenre('Commedia', 'Le ambientazioni variano da luoghi iconici come il palazzo reale in Inghilterra, a città americane, e altre ambientazioni colorate e vivaci che riflettono il tono comico e avventuroso del film.');
+$fantasy = new FilmGenre('Fantascienza', 'L\'ambientazione è il pianeta Pandora, un mondo alieno caratterizzato da una vegetazione lussureggiante, paesaggi mozzafiato e una fauna e flora uniche.');
 
-$avatar = new Movie('Avatar', 'Fantascienza', 2010, 'Inglese');
+//Film
+$minions = new Movie('Minions', 2015, 'Italiano', $comedy);
+$avatar = new Movie('Avatar', 2010, 'Inglese', $fantasy);
 
 ?>
 
@@ -68,17 +67,17 @@ $avatar = new Movie('Avatar', 'Fantascienza', 2010, 'Inglese');
         <!--Funzioni-->
         <h2 class="fw-bold"> <?= $minions->getTitle(); ?> </h2>
         <ul class="fw-bold">
-            <li><?= $minions->getGenre(); ?></li>
             <li><?= $minions->getYear(); ?></li>
             <li><?= $minions->getLanguage(); ?></li>
+
         </ul>
 
         <!--Senza funzioni-->
         <h2 class="fw-bold"> <?= $avatar->title; ?> </h2>
         <ul class="fw-bold">
-            <li> Genere: <?= $avatar->genre; ?></li>
             <li> Anno: <?= $avatar->year; ?></li>
             <li> Lingua: <?= $avatar->language; ?></li>
+            <li> Genere: <?= $avatar-> ?></li>
         </ul>
 
     </main>
