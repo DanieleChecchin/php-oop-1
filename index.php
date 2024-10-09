@@ -23,22 +23,22 @@ class Movie
     //Funzioni
     function getTitle() //
     {
-        return 'Il titolo è:' . $this->title;
+        return 'Il titolo è: ' . $this->title;
     }
 
     function getGenre()
     {
-        return 'Il titolo è:' . $this->genre;
+        return 'Genere: ' . $this->genre;
     }
 
     function getYear()
     {
-        return 'Il titolo è:' . $this->year;
+        return 'Anno di uscita: ' . $this->year;
     }
 
     function getLanguage()
     {
-        return 'Il titolo è:' . $this->language;
+        return 'Lingua: ' . $this->language;
     }
 }
 
@@ -60,24 +60,20 @@ $avatar = new Movie('Avatar', 'Fantascienza', 2010, 'Inglese');
 </head>
 
 <body>
-    <!--create un file index.php in cui:
-è definita una classe ‘Movie’
-=> all'interno della classe sono dichiarate delle variabili d'istanza
-=> all'interno della classe è definito un costruttore
-=> all'interno della classe è definito almeno un metodo
-vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
--->
+
     <main class="container py-5">
 
         <h1 class="fw-bold text-center"> PHP OOP 1 </h1>
 
-        <h2 class="fw-bold"> <?= $minions->title; ?> </h2>
+        <!--Funzioni-->
+        <h2 class="fw-bold"> <?= $minions->getTitle(); ?> </h2>
         <ul class="fw-bold">
-            <li> Genere: <?= $minions->genre; ?></li>
-            <li> Anno: <?= $minions->year; ?></li>
-            <li> Lingua: <?= $minions->language; ?></li>
+            <li><?= $minions->getGenre(); ?></li>
+            <li><?= $minions->getYear(); ?></li>
+            <li><?= $minions->getLanguage(); ?></li>
         </ul>
 
+        <!--Senza funzioni-->
         <h2 class="fw-bold"> <?= $avatar->title; ?> </h2>
         <ul class="fw-bold">
             <li> Genere: <?= $avatar->genre; ?></li>
@@ -85,8 +81,8 @@ vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori 
             <li> Lingua: <?= $avatar->language; ?></li>
         </ul>
 
-
     </main>
+
 </body>
 
 </html>
