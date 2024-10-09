@@ -1,5 +1,19 @@
 <?php
 
+class Movie
+{
+    public $title;
+    public $genre;
+    public $year;
+    public $language;
+}
+
+$avatar = new Movie();
+$avatar->title = 'Avatar';
+
+$minions = new Movie();
+$minions->title = 'Minions';
+
 ?>
 
 <!DOCTYPE html>
