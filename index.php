@@ -18,6 +18,7 @@ class Movie
         $this->title = $_title;
         $this->year = $_year;
         $this->language = $_language;
+        $this->genre = $_genre;
     }
 
     //Funzioni
@@ -69,6 +70,8 @@ $avatar = new Movie('Avatar', 2010, 'Inglese', $fantasy);
         <ul class="fw-bold">
             <li><?= $minions->getYear(); ?></li>
             <li><?= $minions->getLanguage(); ?></li>
+            <li><?= $minions->genre->name; ?></li>
+            <li><?= $minions->genre->setting; ?></li>
 
         </ul>
 
@@ -77,7 +80,8 @@ $avatar = new Movie('Avatar', 2010, 'Inglese', $fantasy);
         <ul class="fw-bold">
             <li> Anno: <?= $avatar->year; ?></li>
             <li> Lingua: <?= $avatar->language; ?></li>
-            <li> Genere: <?= $avatar-> ?></li>
+            <li> Genere: <?= $avatar->genre->name; ?></li>
+            <li> Genere: <?= $avatar->genre->setting; ?></li>
         </ul>
 
     </main>
