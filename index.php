@@ -7,15 +7,44 @@ class Movie
     public $year;
     public $language;
 
-    function __construct($_title, $_genre, $_year, $_language)
-    {
+    //Construct popolato
+    function __construct(
+        string $_title,
+        string $_genre,
+        int $_year,
+        string $_language
+    ) {
         $this->title = $_title;
         $this->genre = $_genre;
         $this->year = $_year;
         $this->language = $_language;
     }
+
+    //Funzioni
+    function getTitle() //
+    {
+        return 'Il titolo è:' . $this->title;
+    }
+
+    function getGenre()
+    {
+        return 'Il titolo è:' . $this->genre;
+    }
+
+    function getYear()
+    {
+        return 'Il titolo è:' . $this->year;
+    }
+
+    function getLanguage()
+    {
+        return 'Il titolo è:' . $this->language;
+    }
 }
 
+$minions = new Movie('Minions', 'Animazione', 2015, 'Italiano');
+
+$avatar = new Movie('Avatar', 'Fantascienza', 2010, 'Inglese');
 
 ?>
 
