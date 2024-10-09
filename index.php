@@ -1,18 +1,21 @@
 <?php
 
 class Movie
-{
+{     //Variabili di istanza
     public $title;
     public $genre;
     public $year;
     public $language;
+
+    function __construct($_title, $_genre, $_year, $_language)
+    {
+        $this->title = $_title;
+        $this->genre = $_genre;
+        $this->year = $_year;
+        $this->language = $_language;
+    }
 }
 
-$avatar = new Movie();
-$avatar->title = 'Avatar';
-
-$minions = new Movie();
-$minions->title = 'Minions';
 
 ?>
 
