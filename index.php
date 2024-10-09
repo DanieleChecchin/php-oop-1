@@ -71,6 +71,21 @@ vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori 
 
         <h1 class="fw-bold text-center"> PHP OOP 1 </h1>
 
+        <h2 class="fw-bold"> <?= $minions->title; ?> </h2>
+        <ul class="fw-bold">
+            <li> Genere: <?= $minions->genre; ?></li>
+            <li> Anno: <?= $minions->year; ?></li>
+            <li> Lingua: <?= $minions->language; ?></li>
+        </ul>
+
+        <h2 class="fw-bold"> <?= $avatar->title; ?> </h2>
+        <ul class="fw-bold">
+            <li> Genere: <?= $avatar->genre; ?></li>
+            <li> Anno: <?= $avatar->year; ?></li>
+            <li> Lingua: <?= $avatar->language; ?></li>
+        </ul>
+
+
     </main>
 </body>
 
